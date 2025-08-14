@@ -1,0 +1,5 @@
+Django
+Pillow
+numpy
+scikit-image
+scikit-learn
