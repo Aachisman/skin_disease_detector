@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Skin Defect Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #c2e9fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+            margin: 15px 0;
+            border: 2px dashed #66b2ff;
+            border-radius: 8px;
+            background: #f9f9f9;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="file"]:hover {
+            border-color: #3399ff;
+            background: #eef7ff;
+        }
+
+        input[type="submit"] {
+            background: #3399ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #1a8cff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image to Predict Skin Defect</h1>
+        <form action="{% url 'predict' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file" accept="image/*" required>
+            <br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
