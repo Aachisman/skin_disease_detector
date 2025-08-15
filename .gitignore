@@ -1,0 +1,32 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+# Database
+db.sqlite3
+
+# Media and static files
+/media
+/staticfiles
+
+# Environment
+.env
+*.env
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Migrations (optional: remove if you want migrations tracked)
+migrations/
+
+# Python cache
+*.py[cod]
+*$py.class
