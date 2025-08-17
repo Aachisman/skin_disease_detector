@@ -2,4 +2,5 @@ Django
 Pillow
 numpy
 scikit-image
+gunicorn==23.0.0
 scikit-learn
